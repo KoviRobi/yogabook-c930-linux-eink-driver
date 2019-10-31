@@ -3,6 +3,10 @@ KDIR ?= /lib/modules/`uname -r`/build
 default:
 	$(MAKE) -C $(KDIR) M=$$PWD
 
+install:
+	$(MAKE) -C $(KDIR) modules_install M=$$PWD INSTALL_MOD_PATH=/
+	/sbin/depmod
+
 test: default
 	-rmmod wacom
 	-rmmod usbhid
@@ -35,16 +39,6 @@ run: default
 	-rmmod usbhid
 	-rmmod eink
 	insmod eink.ko
-	-modprobe usbhid
-	-modprobe wacom
-
-install:
-	-rmmod wacom
-	-rmmod usbhid
-	-rmmod eink
-	$(MAKE) -C $(KDIR) modules_install M=$$PWD
-	-depmod
-	-modprobe eink
 	-modprobe usbhid
 	-modprobe wacom
 
