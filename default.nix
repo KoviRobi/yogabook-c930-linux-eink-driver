@@ -1,7 +1,7 @@
 { stdenv, fetchFromGitHub, kernel }:
 
 stdenv.mkDerivation rec {
-  name = "yogabook-c930-eink-driber-${kernel.version}-${version}";
+  name = "yogabook-c930-eink-driver-${kernel.version}-${version}";
   version = "unstable-2019-09-05";
 
   src = ./driver;
