@@ -1,3 +1,7 @@
+# Changes in fork
+
+I have added a [./default.nix](./default.nix) to build it for [NixOS](nixos.org). I use it in my nixos config ([calling the package](https://github.com/KoviRobi/nixos-config/blob/master/overlays/mypkgs.nix), [using the package](https://github.com/KoviRobi/nixos-config/blob/19f4658594a2ebd4bd6831bcdf393c1dfbc33f6d/configurations/yoga-book.nix#L18-L19), [using volume up to reset the keyboard](https://github.com/KoviRobi/nixos-config/blob/19f4658594a2ebd4bd6831bcdf393c1dfbc33f6d/configurations/yoga-book.nix#L21-L32))
+
 # Lenovo YogaBook C930 E-Ink for Linux project
 
 #### _tl;dr_ if you want to use the E-Ink keyboard on your YogaBook C930, this project will help you do it.
